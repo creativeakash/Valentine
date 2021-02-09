@@ -71,7 +71,9 @@ body {
 .btn:active {
   background: #F50057;
 }
-
+element.style {
+    color: white;
+}
 #header {
   display: -webkit-box;
   display: -ms-flexbox;
