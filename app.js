@@ -24,7 +24,15 @@ if (link.indexOf('#') != -1 && link.indexOf('#') != (link.length - 1)) {
     document.getElementById('main').classList.remove('hide');
     // GETTING THE TITLE FROM LINK
     link = link.slice(link.indexOf('#') + 1);
-    title.innerHTML = link;
+    if (link.includes("%20+%20")) {
+        var res = link.replace("%20+%20", ' <i style="color:red;" class="fas fa-heart"></i> ');
+     }else if(link.includes("+")){
+        var res = link.replace("+", ' <i style="color:red;" class="fas fa-heart"></i> ');
+     }else{
+         var res = link;
+     }
+
+    title.innerHTML = res;
 }
 
 // LINES THAT ARE STORING IN A ARRAY
